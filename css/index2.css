@@ -1,0 +1,225 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto",sans-serif;
+    background-image: url('carol.jpg');
+    background-size: cover;
+}
+
+
+
+header{
+    position: fixed;
+    background: linear-gradient(135deg,rgb(122, 2, 2),rgb(11, 11, 148));
+    padding: 20px;
+    width: 100%;
+    height: 30px;
+}
+
+.left_area h3{
+    color:rgb(156, 4, 4);
+    margin:0;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.left_area span{
+    color: rgb(3, 95, 148);
+}
+
+.logout_btn{
+    padding: 5px;
+    text-decoration: none;
+    float: right;
+    margin-top: -30px;
+    margin-right: 40px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(3, 95, 148);
+}
+
+.logout:hover{
+    background: rgb(156, 4, 4);
+}
+
+.sidebar{
+    background: black;
+    margin-top: 70px;
+    padding-top: 30px;
+    position: fixed;
+    left: 0;
+    width:250px;
+    height: 100%;
+    transition: 0.5s;
+    transition-property: left;
+}
+
+.sidebar .profile_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar h4{
+    color: #ccc;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar a{
+    color: rgb(3, 95, 148);
+    display: block;
+    width:100%;
+    line-height: 60px;
+    text-decoration: none;
+    padding-left: 40px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.sidebar a:hover{
+    background:linear-gradient(135deg,rgb(122, 2, 2),rgb(11, 11, 148));
+}
+
+.sidebar i{
+    padding-right: 10px;
+}
+
+label #sidebar_btn{
+    z-index: 1;
+    color: rgb(3, 95, 148);
+    position: fixed;
+    cursor: pointer;
+    left: 300px;
+    font-size: 20px;
+    margin: 5px 0;
+    transition: 0.5s;
+    transition-property: color;
+}
+
+label #sidebar_btn:hover{
+    color: darkred;
+}
+
+#check:checked ~.sidebar{
+    left:-190px
+}
+
+#check:checked ~.sidebar a span{
+    display:none;
+}
+
+#check:checked~.sidebar a{
+    font-size: 20px;
+    margin-left: 170px;
+    width: 80px;
+}
+
+#check{
+    display: none;
+}
+
+.container{
+    margin-left: 250px;
+	widows: 7px;
+	height:100vh;
+	display:flex;
+	justify-content:center;
+    align-items:center;
+    transition:0.5s;
+}
+
+#check:checked~ .container{
+    margin-left: 60px;
+}
+
+
+.marvel{
+	width:600px;
+	padding-left: 150px;
+	padding-top: 60px;
+}
+
+
+body{
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.box{
+    position:relative;
+    width:200px;
+    height: 200px;
+    transform-style:preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform:perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform:perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box span{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i)*60deg))translateZ(240px);
+}
+
+.box span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+}
+
+
+.box1{
+    position:relative;
+    width:200px;
+    height: 200px;
+    transform-style:preserve-3d;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform:perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform:perspective(1000px) rotateY(360deg);
+    }
+}
+
+.box1 span{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform:rotateY(calc(var(--i)*90deg))translateZ(140px);
+}
+
+.box1 span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120%;
+    height: 120%;
+}
